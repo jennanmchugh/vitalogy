@@ -3,6 +3,8 @@ var path = require('path');
 var app = express(); 
 var router = express.Router(); 
 var viewsPath = __dirname + '/views/';
+app.use('/img', express.static(path.join(__dirname, 'public/img')));
+app.use('/css', express.static(path.join(__dirname, 'public/css')));
 
 router.use(function (req, res, next) {
     console.log("/" + req.method);
@@ -30,8 +32,6 @@ app.use("/", router);
 app.use("*", function(req, res) {
     res.sendFile(viewsPath + "404.html");
 });
-
-app.use(express.static(__dirname + 'public'));
 
 app.listen(process.env.PORT || 3000, function() {
     var port = this.address().port;
