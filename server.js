@@ -31,7 +31,7 @@ app.use("*", function(req, res) {
     res.sendFile(viewsPath + "404.html");
 });
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 app.listen(process.env.PORT || 3000, function() {
     var port = this.address().port;
