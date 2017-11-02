@@ -3,7 +3,7 @@
         <meta charset="utf8">
 
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen, projection">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         <link rel="stylesheet" href="css/style.css">
@@ -24,8 +24,9 @@
             </ul>
             <ul class="side-nav" id="nav-mobile">
                 <li><a href="/">Home</a></li>
-                <li><a class="dropdown-button" href="#!" data-activates="dropdown">What We Test For<i class="material-icons right">arrow_drop_down</i></a></li>                
-            </ul>
+                <li><a style="color:#760C0C" href="bloodpressure">Blood Pressure</a></li>
+                <li><a style="color:#760C0C" href="triglycerides">Triglycerides</a></li>
+                <li><a style="color:#760C0C" href="cholesterol">Cholesterol</a></li>            </ul>
             </div>
         </nav>
         <!-- dropdown content -->
@@ -125,5 +126,10 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <!-- Compiled and minified JavaScript -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".button-collapse").sideNav();
+            });
+        </script>
     </body>
 </html>
