@@ -6,6 +6,10 @@ a {
     color: #760C0C;
 }
 
+a:hover {
+    color: red;
+}
+
 footer .page-footer {
     background-color: #760C0C;
 }
